@@ -3,6 +3,7 @@
 from psycopg2 import connect
 from psycopg2.extensions import connection
 
+
 def get_connection(config: dict) -> connection:
     """Return a database connection."""
     conn = connect(
@@ -18,7 +19,7 @@ def get_all_messages(conn: connection) -> list[str]:
     with conn.cursor() as cur:
         cur.execute("SELECT * FROM message;")
         return cur.fetchall()
-
+    
 
 def insert_message(conn: connection, text: str) -> tuple[int, str]:
     """Insert a single message into the database and return the message data."""
