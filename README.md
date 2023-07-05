@@ -8,3 +8,13 @@
 ## Running the project
 
 `python3 main.py`
+
+
+API endpoint - /stories
+    - call a function that calls the DB
+
+function that calls the DB
+    - interacts with a connection
+
+connection
+    - actually talks to the DB
